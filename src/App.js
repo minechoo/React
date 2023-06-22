@@ -5,11 +5,15 @@ function App() {
 
 	return (
 		<div className='wrap'>
-			<ul>
-				{colors.map((color, idx) => {
-					return <li key={idx}>{color}</li>;
-				})}
-			</ul>
+			<h1>color chart</h1>
+			{colors.map((color, idx) => {
+				return (
+					<article key={idx}>
+						<div className='bg' style={{ backgroundColor: color }}></div>
+						<div className='txt'>{color}</div>
+					</article>
+				);
+			})}
 		</div>
 	);
 }
