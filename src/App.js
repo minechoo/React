@@ -1,29 +1,24 @@
-// const App = ()=> {
-// 	return (
-// 		<>
-// 			<h1 id='title'>Hello</h1>
-// 			<h2 className='title2'>world</h2>
-// 		</>
-// 	);
-// }
+/* import Header from './Header';
+   import Footer from './Footer';
+	 import Section from './Section';*/
+//import { Header, Footer, Section } from './Common';
+// const name = '김영희';
+// const class1 = 'box';
 
-// const App = () => (
-// 	<>
-// 		<h1 id='title'>Hello</h1>
-// 		<h2 className='title2'>world</h2>
-// 	</>
-// );
-// import Header from './Header';
-// import Footer from './Footer';
-// import Section from './Section';
-import { Header, Footer, Section } from './Common';
+import './scss/style.scss';
 
 function App() {
+	const fontStyle = {
+		color: 'aqua',
+		fontSize: 60,
+		fontWeight: 'normal',
+	};
 	return (
 		<>
-			<Header />
-			<Footer />
-			<Section />
+			<div className='wrap'>
+				<h1 style={fontStyle}>TITLE1</h1>
+				<h2 style={{ color: 'orange', fontSize: 30 }}>TITLE1</h2>
+			</div>
 		</>
 	);
 }
