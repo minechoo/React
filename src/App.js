@@ -1,4 +1,5 @@
 import './scss/style.scss';
+import Card from './Card';
 
 function App() {
 	const colors = ['aqua', 'lightgreen', 'hotpink', 'orange', 'skyblue'];
@@ -7,12 +8,8 @@ function App() {
 		<div className='wrap'>
 			<h1>color chart</h1>
 			{colors.map((color, idx) => {
-				return (
-					<article key={idx}>
-						<div className='bg' style={{ backgroundColor: color }}></div>
-						<div className='txt'>{color}</div>
-					</article>
-				);
+				//부모요소에서 color, idx라는 props으로 Card 컴포넌트에 데이터 전달
+				return <Card key={idx} color={color} idx={idx} />;
 			})}
 		</div>
 	);
@@ -21,11 +18,6 @@ function App() {
 export default App;
 
 /**
- * 불변성(immutable) : 원형을 변형시키지 않으면서 원본을 유지한채로 복사본을 변경루 비교하는 형태
- * -리액트에서는 원본대비 변경된 부분을 비교해서 화면은 랜더링하기때문데 불변성유지가 필수
- * - 리액트에서는 원본과 복사본이 있어야함
- * - 참조형 자료를 변경할때에는 무조건 전개연산자로 deep copy
- * - 특정요소를 반복처리하기 위해서는 무조건 map처리
- * - JSX문법 안쪽에서는 map외의 반복문 사용불가
- * - JSX로 반복되는 요소를 동적으로 만들때에는 무조건 key값으로 고유값을 등록(리액트로 하여금 반복도는 요소를 개별적으로 인지시키기 위한)
+외부 컴포넌트 파일을 import 해서 연결시 특정 데이터 값을 전달하기 위한 위해서는 props을 통해 전달
+기본적으로 리액트 단방향 데이터 바인딩(부모에서 자식으로 데이터 건달)
  */
