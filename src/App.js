@@ -1,18 +1,32 @@
 // const App = ()=> {
 // 	return (
 // 		<>
-// 			<h1 id='title'>Hello2</h1>
+// 			<h1 id='title'>Hello</h1>
 // 			<h2 className='title2'>world</h2>
 // 		</>
 // 	);
 // }
 
-const App = () => (
-	<>
-		<h1 id='title'>Hello2</h1>
-		<h2 className='title2'>world</h2>
-	</>
-);
+// const App = () => (
+// 	<>
+// 		<h1 id='title'>Hello</h1>
+// 		<h2 className='title2'>world</h2>
+// 	</>
+// );
+// import Header from './Header';
+// import Footer from './Footer';
+// import Section from './Section';
+import { Header, Footer, Section } from './Common';
+
+function App() {
+	return (
+		<>
+			<Header />
+			<Footer />
+			<Section />
+		</>
+	);
+}
 
 export default App;
 
