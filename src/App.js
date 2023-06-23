@@ -19,8 +19,11 @@ function App() {
 			</ul>
 			<button
 				onClick={() => {
+					//기존 Colors에 들어가 있는 참조형 자료인 배열값을 Deep Copy
 					const newColors = [...Colors];
+					//원본은 유지한채 복사가된 배열값을 변경
 					newColors[2] = 'aqua';
+					//변경된  복사된 배열값을 state변경함수로 변경처리
 					setColors(newColors);
 				}}
 			>
