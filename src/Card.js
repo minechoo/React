@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Card(props) {
-	console.log(props);
+function Card({ color, idx }) {
+	//console.log(props);
 	return (
 		<article>
-			<div className='bg' style={{ backgroundColor: props.color }}></div>
-			<div className='txt'>{props.color}</div>
+			<div className='bg' style={{ backgroundColor: color }}></div>
+			<div className='txt'>{color}</div>
 		</article>
 	);
 }
