@@ -9,22 +9,27 @@ function App() {
 	//State: 컴포넌트 내부에서 특정정보값을 담아줌 - 해당 값이 바뀌면 컴포넌트 함수를 강제 재호출하면서 새로운 화면으로 갱신
 
 	//useState 는 배열값을 리턴[인수로 전달한 값을 state에 담아서 첫번째값, 해당 state 를 변경할 수 있는 전용함수]
-	const [isPop, setIsPop] = useState(false);
+	const [IsPop, setIsPop] = useState(false);
 	console.log(useState(false));
+
+	const [Color, setColor] = useState('#333');
 
 	return (
 		<>
 			<main className='wrap'>
 				<h1
+					style={{ color: Color }}
 					onClick={() => {
 						setIsPop(true);
 					}}
 				>
 					메인 컨텐츠
 				</h1>
+				<button onClick={() => setColor('red')}>제목 글자색을 red로 변경</button>
+				<button onClick={() => setColor('aqua')}>제목 글자색을 aqua로 변경</button>
 			</main>
-			{/* {isPop ? <Popup /> : null} */}
-			{isPop && <Popup />}
+			{/* {IsPop ? <Popup /> : null} */}
+			{IsPop && <Popup />}
 		</>
 	);
 }
