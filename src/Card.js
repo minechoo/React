@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Card({ color, idx, width }) {
+function Card({ color = 'grey', width = '200px' }) {
 	//console.log(props);
 	return (
 		<article style={{ width: width }}>

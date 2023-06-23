@@ -9,8 +9,9 @@ function App() {
 			<h1>color chart</h1>
 			{colors.map((color, idx) => {
 				//부모요소에서 color, idx라는 props으로 Card 컴포넌트에 데이터 전달
-				if (idx === 2) return <Card key={idx} color={color} idx={idx} width={'150px'} />;
-				else return <Card key={idx} color={color} idx={idx} width={'300px'} />;
+				if (idx === 2) return <Card key={idx} color={color} width={'150px'} />;
+				else if (idx === 3) return <Card key={idx} color={color} />;
+				else return <Card key={idx} color={color} width={'300px'} />;
 			})}
 		</div>
 	);
