@@ -29,7 +29,7 @@ function App() {
 				<button onClick={() => setColor('aqua')}>제목 글자색을 aqua로 변경</button>
 			</main>
 			{/* {IsPop ? <Popup /> : null} */}
-			{IsPop && <Popup />}
+			{IsPop && <Popup setIsPop={setIsPop} />}
 		</>
 	);
 }
