@@ -1,15 +1,13 @@
+import { useState } from 'react';
 import './scss/style.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Popup from './Popup';
 
 function App() {
+	const [IsPop, setIsPop] = useState(false);
 	return (
 		<>
-			<p className='txt1'>Hello</p>
-			<p className='txt2'> world!</p>
-			<FontAwesomeIcon icon={faHouse} />
-			<FontAwesomeIcon icon={faEnvelope} />
+			<button onClick={() => setIsPop(true)}>팝업 열기</button>
+			{IsPop && <Popup setIsPop={setIsPop} />}
 		</>
 	);
 }
