@@ -5,8 +5,9 @@ import './scss/style.scss';
  * 아래와 같이 코드작성을 하면 App컴포넌트가 호출되고 나야지만 article요소가
  * 동적으로 생기는 구조이기때문에
  * const article = document.querySelector('article');
- * 위의 구문은 현재 에러 발생(아직 없는 요소를 탐색학때문)
- * 이유-현재 리액트
+ * 위의 구문은 현재 에러 발생(아직 없는 요소를 탐색하기 때문)
+ * 리액트 컴포너트 안쪽에서는 document.querySelector문을 가급적 쓰면 안됨
+ * 이유-현재 리액트 관리되고 있는 가상돔을 제어하는것이 아닌 제어가 불가능한 리얼돔을 가져오기 때문
  */
 
 function App() {
