@@ -26,7 +26,7 @@ function Popup({ setIsPop }) {
 
 			<p>{Data}</p>
 			<button onClick={() => setData(++Data)}>plus</button>
-			<button onClick={() => setData(--Data)}>minus</button>
+			<button onClick={() => setData(Data - 1)}>minus</button>
 		</aside>
 	);
 }
