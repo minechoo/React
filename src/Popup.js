@@ -19,6 +19,7 @@ const popupStyle = {
 
 function Popup({ setIsPop }) {
 	let [Data, setData] = useState(0);
+
 	//의존성배열이 비어있는 useEffect문 (컴포넌트 생성을 캐치)
 	//실사례1 - 외부데이터를 패칭하는 무거운 함수를 처음 한범만 호출해야할때
 	//-실사례2 - window 객체에 이벤트 바인딩할때(브라우저 스크롤, 리사이즈 이벤트 연결)
